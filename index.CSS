@@ -74,22 +74,13 @@ textarea{
 
 /*Display */
 .row{
-    overflow: hidden;
+    display:flex;
+    flex-direction: row;
 }
-.row label{
-    display: block;
-    width: 30%;
-    
+.column{
+    margin: 8px;
 }
-.row .column{
-    width:30%;
-    float: left;
-}
-.column label{
-    border: 1px solid #000;
-    display: block;
-    width: 93%;
-}
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .column {
