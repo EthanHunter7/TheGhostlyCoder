@@ -1,0 +1,98 @@
+
+* {
+    margin: 0;
+    padding:0;
+    font-family: "Permanent Marker";
+}
+
+/* Header*/
+header{
+    padding: 20px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+
+
+}
+/* Field set and legend */
+fieldset{
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 1px #fff;
+    border-radius: 6px;
+    min-width: 200px;
+    color: #fff;
+}
+legend{
+    font-size: 1.25em;
+    padding: 0.25em;
+    color: #fff;
+}
+
+/*Labels*/
+labels {
+    display: block;
+    margin-top: 16px;
+    background-color: #fff;
+    color: #000;
+}
+
+.checks labels {
+    margin-top: 0;
+}
+
+/*Body*/
+body{
+    background-image:url('/Resources/stars-3750824.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*Inputs and Text Areas*/
+input[type="submit"]{
+    padding: .5em 1em;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    align-items: center;
+}
+
+input{
+    padding: .5em;
+    border: solid 1px #000;
+}
+
+textarea{
+    min-height: 8em;   
+    min-width: 100%;
+    padding: .5em;
+    border: solid 1px #000
+}
+
+/*Display */
+.row{
+    overflow: hidden;
+}
+.row label{
+    display: block;
+    width: 30%;
+    
+}
+.row .column{
+    width:30%;
+    float: left;
+}
+.column label{
+    border: 1px solid #000;
+    display: block;
+    width: 93%;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
