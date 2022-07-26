@@ -7,15 +7,16 @@
 
 /* Header*/
 header{
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background: #000;
     color: #fff;
-    font-size: 20px;
 }
 h1{
     display: inline-block;
+    font-size: 50px;
 }
+
 /* Field set and legend */
 fieldset{
     margin: 2em 0;
@@ -31,13 +32,6 @@ legend{
     color: #fff;
 }
 
-/*Labels*/
-labels {
-    display: block;
-    margin-top: 16px;
-    background-color: #fff;
-    color: #000;
-}
 
 .checks labels {
     margin-top: 0;
@@ -50,6 +44,27 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.error{
+    color:#de0202;
+}
+.required{
+    border-radius: 6px;
+    width: 10%;
+    border: 1px solid #fff;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.key{
+    color: #fff;
+}
+
+fieldset{
+    max-width: 500px;
+}
+
+
 /*Inputs and Text Areas*/
 input[type="submit"]{
     padding: .5em 1em;
@@ -77,6 +92,8 @@ textarea{
 .row{
     display:flex;
     flex-direction: row;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 .column{
     margin: 8px;
@@ -89,3 +106,6 @@ textarea{
       width: 100%;
     }
   }
+
+
+  

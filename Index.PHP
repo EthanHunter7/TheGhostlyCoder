@@ -202,11 +202,12 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
   ?>
   <!--Header-->
     <header>
-        <img class="img" src="/Resources/PngItem_6377826.png" alt="Cartoon Ghosts" width="100px" height="100px"/>
+      <div>
+        <img class="ghost" src="/Resources/PngItem_6377826.png" alt="Cartoon Ghosts" width="80px" height="80px"/>
         <h1>The Ghostly Coder</h1>
+      </div>
     </header>
-
-  <p><span class="error">* required field</span></p>
+    <p class="required"><span class="error"><label class="key">Key :  </label>* required field</span></p>
   <!--Personal Information-->
   <form action="/Thanks.PHP" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
     <div class="row">
@@ -214,7 +215,7 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
         <fieldset class= "personal">
           <legend>Personal Information</legend>
 
-          <div>
+          <div class="labels">
             <label class="marker">First Name:</label>
             <input type="text" name="Firstname" value="<?php echo $Firstname;?>">
             <span class="error">* <?php echo $FirstnameErr;?></span>
