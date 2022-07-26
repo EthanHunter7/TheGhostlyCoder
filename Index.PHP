@@ -215,53 +215,53 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
         <fieldset class= "personal">
           <legend>Personal Information</legend>
 
-          <div class="labels">
-            <label class="marker">First Name:</label>
+          <div class="labels" title="Only allows to contain letters and whitespace">
+            <label class="marker">First Name :</label>
             <input type="text" name="Firstname" value="<?php echo $Firstname;?>">
             <span class="error">* <?php echo $FirstnameErr;?></span>
           </div>
 
-          <div>
+          <div class="labels" title="Only allows to contain letters and whitespace">
             <label>Middle Name :</label>
             <input type="text" placeholder="Optional" name="Middlename" value="<?php echo $Middlename;?>">
             <span class="error"><?php echo $MiddlenameErr;?></span>
           </div>
             
-          <div>
+          <div class="labels" title="Only allows to contain letters and whitespace">
             <label>Last Name :</label>
             <input type="text" name="Lastname" value="<?php echo $Lastname;?>">
              <span class="error">*<?php echo $LastnameErr;?></span>
           </div>
 
-          <div>
+          <div class="labels">
             <label>Username :</label>
             <input type="text" name="Username" value="<?php echo $Username;?>">
             <span class="error">*<?php echo $UsernameErr;?></span>
           </div>
 
-          <div>
+          <div class="labels">
             <label>Email :</label>
             <input type="text" name="email" value="<?php echo $email;?>">
             <span class="error">*<?php echo $emailErr;?></span>
           </div>
 
-          <div class="checks">
-            <label>Gender :</label>
-            <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Male") echo "checked";?> value="Male">Male
-            <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Female") echo "checked";?> value="Female">Female
-            <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="Other">Other:
+          <div class="checks" title="Must have one checked">
+            <label>Gender : </label>
+            <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Male") echo "checked";?> value="Male">Male 
+            <input type="radio" name="gender" <?php if (isset($gender) && $gender=="Female") echo "checked";?> value="Female">Female 
+            <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="Other">Other :
             <input type="text" name="other" value="<?php echo $other;?>">
             <span class="error">*<?php echo $otherErr;?></span>
             <span class="error"><?php echo $genderErr;?></span>
           </div>  
           
-          <div>
-            <label>Date of Birth :</label>
-            <input type="date" name="date" value="<?php echo $date;?>">
+          <div class="labels" title="Must select a date">
+            <label class="color">Date of Birth :</label>
+            <input class="color" type="date" name="date" value="<?php echo $date;?>">
             <span class="error">*<?php echo $dateErr;?></span>
           </div>
 
-          <div>    
+          <div class="labels" title="Must select at least one option">    
             <label for="Countries">Place of Birth :</label>
             <select name="Countries" id="Countries" value="<?php echo $Countries;?>">
             <option value=""></option>
@@ -461,13 +461,13 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
             </select><span class="error">*<?php echo $CountriesErr?></span>
           </div>
 
-          <div>
+          <div title="Should contain at least one Uppercase, one Number, one Special Character and be at least 8 characters long" class="labels">
             <label>Password :</label>
-            <input type="password" name="password" id="password" maxlength="50">
+            <input  type="password" name="password" id="password" maxlength="50">
             <span class="error">*<?php echo $passwordErr;?></span>
           </div>
 
-          <div>
+          <div class="labels" class="hovertext" data-hover="">
             <label>Confirm Password :</label>
             <input type="password" name="confirm_password" id="confirm_password" maxlength="50">
             <span class="error">*<?php echo $confirm_passwordErr;?></span> 
@@ -479,49 +479,49 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
       <fieldset class="aboutYou">
         <Legend>About Yourself</Legend>
         
-        <div>
+        <div class="labels">
           <label>Favourite :</label>    
           <input type ="text" placeholder="Demon" name="fav_demon" size="22" value="<?php echo $fav_demon;?>">
           <span class="error"><?php echo $fav_demonErr;?></span>
         </div>  
         
-        <div>
+        <div class="labels">
           <label>Favourite :</label>
           <input type ="text" placeholder="Game" name="fav_game" size="22" value="<?php echo $fav_game;?>">
           <span class="error"><?php echo $fav_gameErr;?></span>
         </div>
 
-        <div>
+        <div class="labels">
           <label>Favourite :</label>
           <input type ="text" placeholder="Ghost" name="fav_ghost" size="22" value="<?php echo $fav_ghost;?>">
           <span class="error"><?php echo $fav_ghostErr;?></span>
         </div>
         
-        <div>
+        <div class="labels">
           <label>Favourite :</label>
           <input type ="text" placeholder="Horror Movie" name="fav_horrormovie" size="22" value="<?php echo $fav_horrormovie;?>">
           <span class="error"><?php echo $fav_horrormovieErr;?></span>
         </div>
 
-        <div>
+        <div class="labels">
           <label>Favourite :</label>
           <input type ="text" placeholder="Horror Movie Character" name="fav_character" size="22" value="<?php echo $fav_character;?>">
           <span class="error"><?php echo $fav_characterErr;?></span>
         </div>
         
-        <div>
+        <div class="labels">
           <label>Favourite :</label>
           <input type ="text" placeholder="Music Artist" name="fav_musicartist" size="22" value="<?php echo $fav_musicartist;?>">
           <span class="error"><?php echo $fav_musicartistErr;?></span>
         </div>
         
-        <div>
+        <div class="labels">
           <label>About Me :</label>
           <textarea type ="Comment" rows="4" cols="20" name="Aboutme" value="<?php echo $Aboutme;?>"></textarea><br>
           <span class="error"><?php echo $AboutmeErr;?></span>
         </div>
 
-        <div>
+        <div class="labels">
           <label>Hobbies :</label>
           <textarea type ="Comment" rows= "4" cols="20" name="Hobbies" value="<?php echo $Hobbies;?>"></textarea>
           <span class="error"><?php echo $HobbiesErr;?></span>
@@ -534,37 +534,37 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
       <fieldset class="socialMedia">
         <legend>Social Media</legend>
 
-        <div>
+        <div class="labels">
           <label>Discord :</label>
           <input type ="text" placeholder="Username" name="discord" value="<?php echo $discord;?>">
           <span class="error"><?php echo $discordErr;?></span>
         </div>
         
-        <div>
+        <div class="labels">
           <label>Facebook :</label>
           <input type ="text" placeholder="Username" name="facebook" value="<?php echo $facebook;?>">
           <span class="error"><?php echo $facebookErr;?></span>
         </div>
         
-        <div>
+        <div class="labels">
           <label>GitHub :</label>
           <input type ="text" placeholder="Username" name="github" value="<?php echo $github;?>">
           <span class="error"><?php echo $githubErr;?></span>
         </div>
 
-        <div>
+        <div class="labels">
           <label>Instagram :</label>
           <input type ="text" placeholder="Username" name="instagram" value="<?php echo $instagram;?>">
           <span class="error"><?php echo $instagramErr;?></span>
         </div>
         
-        <div>
+        <div class="labels">
           <label>Linkedin :</label>
           <input type ="text" placeholder="Username" name="linkedin" value="<?php echo $linkedin;?>">
           <span class="error"><?php echo $linkedinErr;?></span>
         </div>
         
-        <div>
+        <div class="labels">
           <label>Twitter :</label>
           <input type ="text" placeholder="Username" name="twitter" value="<?php echo $twitter;?>">
           <span class="error"><?php echo $twitterErr;?></span>
@@ -578,11 +578,11 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
 </form>
 
   <footer>
-    <div>
-      <p>The Ghostly Coder/SurveyForm</p>
+    <div class="name">
+      <p>The Ghostly Coder / SurveyForm</p>
     </div>
     
-    <div>
+    <div class="copyright">
       <p>@copyright 2022 The Ghostly Coder</p>
     </div>
   </footer>

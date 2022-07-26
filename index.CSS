@@ -25,7 +25,12 @@ fieldset{
     border-radius: 6px;
     min-width: 200px;
     color: #fff;
-}
+    max-width: 700px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    width: 500px;
+    }
+
 legend{
     font-size: 1.25em;
     padding: 0.25em;
@@ -33,13 +38,13 @@ legend{
 }
 
 
-.checks labels {
+.checks label {
     margin-top: 0;
 }
 
 /*Body*/
 body{
-    background-image:url('/Resources/stars-3750824.png');
+    background-image:url('/Resources/wp9060319-4k-desktop-smoke-wallpapers.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,10 +54,10 @@ body{
 }
 .required{
     border-radius: 6px;
-    width: 10%;
+    width: 15%;
     border: 1px solid #fff;
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 220px;
     font-size: 20px;
 }
 
@@ -60,8 +65,20 @@ body{
     color: #fff;
 }
 
-fieldset{
-    max-width: 500px;
+
+.labels{
+    font-size: 16px;
+    padding: 3px 6px; 
+    margin-top: 5px; 
+}
+
+/*.labels {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }*/
+.labels{
+    vertical-align: middle;
 }
 
 
@@ -73,12 +90,13 @@ input[type="submit"]{
     background-color: #fff;
     color: #000;
     font-size: 20px;
-    align-items: center;
+    margin-left: 47%;
 }
 
 input{
-    padding: .5em;
+    padding: 8px;
     border: solid 1px #000;
+    font-size: 16px;
 }
 
 textarea{
@@ -92,7 +110,7 @@ textarea{
 .row{
     display:flex;
     flex-direction: row;
-    margin-left: 300px;
+    margin-left: 220px;
     margin-right: 300px;
 }
 .column{
@@ -105,6 +123,14 @@ textarea{
     .column {
       width: 100%;
     }
+  }
+
+  /* Footer */
+  footer{
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    margin-top: 90px;
   }
 
 
