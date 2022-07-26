@@ -22,29 +22,29 @@
     <div>
       <fieldset>
         <legend>Personal Information</legend>
-        <div><label>First Name : </label><?php echo $_POST["Firstname"]; ?></div>
-        <div><label>Middle Name : </label><?php echo $_POST["Middlename"]; ?></div>
-        <div><label>Last Name : </label><?php echo $_POST["Lastname"]; ?></div>
-        <div><label>Username : </label><?php echo $_POST["Username"]; ?></div>
-        <div><label>Email : </label><?php echo $_POST["email"]; ?></div>
-        <div><label>Gender : </label><?php echo $_POST["gender"]; echo $_POST["other"] ?></div>
-        <div><label>Date Of Birth : </label><?php echo $_POST["date"]; ?></div>
-        <div><label>Place Of Birth : </label><?php echo $_POST["Countries"]; ?><div>
-        <div><label>Pasword : </label><?php echo $_POST["Password"]; ?></div>
+        <div class="labels"><label>First Name : </label><?php echo $_POST["Firstname"]; ?></div>
+        <div class="labels"><label>Middle Name : </label><?php echo $_POST["Middlename"]; ?></div>
+        <div class="labels"><label>Last Name : </label><?php echo $_POST["Lastname"]; ?></div>
+        <div class="labels"><label>Username : </label><?php echo $_POST["Username"]; ?></div>
+        <div class="labels"><label>Email : </label><?php echo $_POST["email"]; ?></div>
+        <div class="labels"><label>Gender : </label><?php echo $_POST["gender"]; echo $_POST["other"] ?></div>
+        <div class="labels"><label>Date Of Birth : </label><?php echo $_POST["date"]; ?></div>
+        <div class="labels"><label>Place Of Birth : </label><?php echo $_POST["Countries"]; ?><div>
+        <div class="labels"><label>Pasword : </label><?php echo $_POST["password"]; ?></div>
       </fieldset> 
     </div>
 
     <div>
       <fieldset>
         <legend>About Yourself</legend>
-        <div><label>Favourite Demon : </label><?php echo $_POST["fav_demon"]; ?></div>
-        <div><label>Favourite Game : </label><?php echo $_POST["fav_game"]; ?></div>
-        <div><label>Favourite Ghost : </label><?php echo $_POST["fav_ghost"]; ?></div>
-        <div><label>Favourite Horror Movie : </label><?php echo $_POST["fav_horrormovie"]; ?></div>
-        <div><label>Favourite Horror Movie Character : </label><?php echo $_POST["fav_character"]; ?></div>
-        <div><label>Favourite Music Artist : </label><?php echo $_POST["fav_musicartist"]; ?></div>
-        <div><label>About Your : </label><?php echo $_POST["Aboutme"]; ?></div>
-        <div><label>Hobbies : </label><?php echo $_POST["Hobbies"]; ?>,</div>
+        <div class="labels"><label>Favourite Demon : </label><?php echo $_POST["fav_demon"]; ?></div>
+        <div class="labels"><label>Favourite Game : </label><?php echo $_POST["fav_game"]; ?></div>
+        <div class="labels"><label>Favourite Ghost : </label><?php echo $_POST["fav_ghost"]; ?></div>
+        <div class="labels"><label>Favourite Horror Movie : </label><?php echo $_POST["fav_horrormovie"]; ?></div>
+        <div class="labels"><label>Favourite Horror Movie Character : </label><?php echo $_POST["fav_character"]; ?></div>
+        <div class="labels"><label>Favourite Music Artist : </label><?php echo $_POST["fav_musicartist"]; ?></div>
+        <div class="labels"><label>About Your : </label><?php echo $_POST["Aboutme"]; ?></div>
+        <div class="labels"><label>Hobbies : </label><?php echo $_POST["Hobbies"]; ?></div>
       </fieldset>
     </div>
 

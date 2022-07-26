@@ -18,18 +18,27 @@ h1{
 }
 
 /* Field set and legend */
-fieldset{
-    margin: 2em 0;
-    padding: 1em 2em;
-    border: solid 1px #fff;
-    border-radius: 6px;
-    min-width: 200px;
-    color: #fff;
-    max-width: 700px;
-    margin-bottom: 12px;
-    overflow: hidden;
-    width: 500px;
-    }
+
+    label{
+        display:inline-block;
+        width:120px;
+        text-align:left;
+        color: #fff;
+        }
+    
+        
+    fieldset{
+        border-radius: 8px;
+        border: 3px solid #fff;
+        width:560px;
+        padding: 16px 32px;
+        overflow: hidden;
+        }  
+    
+    .checks{
+        color: #fff;
+        margin-right: 10px;
+      }
 
 legend{
     font-size: 1.25em;
@@ -37,10 +46,6 @@ legend{
     color: #fff;
 }
 
-
-.checks label {
-    margin-top: 0;
-}
 
 /*Body*/
 body{
@@ -57,29 +62,21 @@ body{
     width: 15%;
     border: 1px solid #fff;
     margin-top: 15px;
-    margin-left: 220px;
+    margin-left: 130px;
     font-size: 20px;
 }
 
 .key{
     color: #fff;
+    display: inline;
 }
 
 
 .labels{
     font-size: 16px;
-    padding: 3px 6px; 
     margin-top: 5px; 
 }
 
-/*.labels {
-    display: flex;
-    align-items: center;
-    justify-content:center;
-  }*/
-.labels{
-    vertical-align: middle;
-}
 
 
 /*Inputs and Text Areas*/
@@ -91,12 +88,14 @@ input[type="submit"]{
     color: #000;
     font-size: 20px;
     margin-left: 47%;
+    text-decoration: none;
 }
 
 input{
     padding: 8px;
     border: solid 1px #000;
     font-size: 16px;
+    margin-right: 10px;
 }
 
 textarea{
@@ -110,13 +109,14 @@ textarea{
 .row{
     display:flex;
     flex-direction: row;
-    margin-left: 220px;
+    margin-left: 120px;
     margin-right: 300px;
 }
 .column{
     margin: 8px;
     flex: 1;
 }
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -130,8 +130,16 @@ textarea{
     padding: 5px;
     background-color: #000;
     color: #fff;
-    margin-top: 90px;
+    margin-top: 180px;
   }
 
+  /*Submit Hover Button*/
+  .submit:hover{
+    cursor: pointer;
+    background-color: #68696b;
+  }
 
-  
+  .submit:active{
+    margin-top: 5px;
+    color: black;
+  }

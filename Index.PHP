@@ -209,7 +209,7 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
     </header>
     <p class="required"><span class="error"><label class="key">Key :  </label>* required field</span></p>
   <!--Personal Information-->
-  <form action="/Thanks.PHP" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+  <form action="" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
     <div class="row">
       <div class="column">
         <fieldset class= "personal">
