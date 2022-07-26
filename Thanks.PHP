@@ -14,7 +14,7 @@
     <label>Last Name: </label><?php echo $_POST["Lastname"]; ?><br>
     <label>Username: </label><?php echo $_POST["Username"]; ?><br>
     <label>Email: </label><?php echo $_POST["email"]; ?><br>
-    <label>Gender: </label><?php echo $_POST["gender "]; echo $_POST["other"] ?><br>
+    <label>Gender: </label><?php echo $_POST["gender"]; echo $_POST["other"] ?><br>
     <label>Date Of Birth: </label><?php echo $_POST["date"]; ?><br>
     <label>Place Of Birth: </label><?php echo $_POST["Countries"]; ?><br>
     <label>Pasword: </label><?php echo $_POST["Password"]; ?><br>

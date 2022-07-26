@@ -68,7 +68,7 @@ input{
 
 textarea{
     min-height: 8em;   
-    min-width: 100%;
+    min-width: 50%;
     padding: .5em;
     border: solid 1px #000
 }
@@ -80,6 +80,7 @@ textarea{
 }
 .column{
     margin: 8px;
+    flex: 1;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
