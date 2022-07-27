@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="./Index.css" rel="stylesheet">
+    <link href="./Form.CSS" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arima&family=Permanent+Marker&display=swap" rel="stylesheet">
     <title>The Ghostly Coder Survey</title>
 </head>
@@ -216,13 +216,17 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
   <!--Header-->
     <header>
       <div>
-        <a class="Home" href="#">Home</a>
-        <a class="Form" href="/Index.PHP">Form</a>
-        <a class="About" href="/About.HTML">About Me</a>
         <img class="ghost" src="/Resources/PngItem_6377826.png" alt="Cartoon Ghosts" width="80px" height="80px"/>
         <h1>The Ghostly Coder</h1>
       </div>
     </header>
+
+    <ul>
+        <li><a class="Home" href="/Home.Html">Home</a></li>
+        <li><a class="active" class="Form" href="/Form.PHP">Form</a>
+        <li><a class="About" href="/About.HTML">About Me</a></li>
+    </ul>
+
     <p class="required"><span class="error"><label class="key">Key :  </label>* required field</span></p>
   <!--Personal Information-->
   <form action="/Thanks.PHP" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 

@@ -5,7 +5,7 @@
     font-family: "Permanent Marker";
 }
 html, body{
-    width: 100%;
+    width: auto;
 }
 
 /* Header*/
@@ -22,7 +22,7 @@ h1{
     margin-right: 100px;
 }
 
-.About{
+/*.About{
     font-size: 20px;
     color: #fff;
     margin-right: 20px;
@@ -32,8 +32,38 @@ h1{
 .About:hover{
     color: #68696b;
 }
+/*Nav Bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+li a {
+    display: inline;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    margin: 0px 10px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #68696b;
+  }
+  .active {
+    background-color: #fff;
+    color: #000;
+  }
 
 
+/*Labels, Feildsets and Legdends*/
     label{
         display:inline-block;
         width:120px;
@@ -147,6 +177,7 @@ textarea{
     color: #fff;
     margin-top: 180px;
   }
+  
 
   /*Submit Hover Button*/
   .submit:hover{
