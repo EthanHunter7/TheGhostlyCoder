@@ -13,6 +13,8 @@ $FirstnameErr = $MiddlenameErr = $LastnameErr = $UsernameErr = $emailErr = $gend
 /*Variables*/ 
 $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = $date = $Countries = $password = $confirm_password = $fav_demon = $fav_game = $fav_ghost = $fav_horrormovie = $fav_character = $fav_musicartist = $Aboutme = $Hobbies = $discord = $facebook = $github = $instagram = $linkedin = $twitter = ""; 
 
+//PHP Submit Validation
+
 //PHP Form Validation
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -93,6 +95,11 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
     if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $password)) {
         $passwordErr = 'the password does not meet the requirements!';
       }
+      if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+        'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+     }else{
+       echo 'Strong password.';
+     }
     }
     if (empty($_POST["confirm_password"])) {
       $confirm_passwordErr= "Password is required";
@@ -101,7 +108,12 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
     if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $password)) {
         echo 'the password does not meet the requirements!';
       }
+      if ($_POST["password"] === $_POST["confirm_password"]){
+        echo "Password correct";
+      }else{ 
+        echo "Password Incorrect";
     }
+  }
     if (empty($_POST["fav_demon"])) {
       $fav_demonErr = "";
     }else{
@@ -200,16 +212,20 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
 
   }
   ?>
+
   <!--Header-->
     <header>
       <div>
+        <a class="Home" href="#">Home</a>
+        <a class="Form" href="/Index.PHP">Form</a>
+        <a class="About" href="/About.HTML">About Me</a>
         <img class="ghost" src="/Resources/PngItem_6377826.png" alt="Cartoon Ghosts" width="80px" height="80px"/>
         <h1>The Ghostly Coder</h1>
       </div>
     </header>
     <p class="required"><span class="error"><label class="key">Key :  </label>* required field</span></p>
   <!--Personal Information-->
-  <form action="" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+  <form action="/Thanks.PHP" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
     <div class="row">
       <div class="column">
         <fieldset class= "personal">

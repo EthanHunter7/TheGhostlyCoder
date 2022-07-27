@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding:0;
+    font-family: "Permanent Marker";
+}
+
+/* Header*/
+header{
+    padding: 10px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+h1{
+    display: inline-block;
+    font-size: 50px;
+    margin-right: 100px;
+}
+
+.About{
+    font-size: 20px;
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+.About:hover{
+    color: #68696b;
+}
+
+.About:active{
+    color: #68696b;
+}
