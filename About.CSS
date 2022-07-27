@@ -17,17 +17,48 @@ h1{
     margin-right: 100px;
 }
 
-.About{
-    font-size: 20px;
+/*Nav Bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+li a {
+    display: inline;
+    padding: 10px;
+    background-color: #000;
     color: #fff;
-    margin-right: 20px;
-    text-decoration: underline;
-    padding-bottom: 20px;
-}
-.About:hover{
-    color: #68696b;
+    text-align: center;
+    margin: 0px 10px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #68696b;
+  }
+  .active {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /*Body*/
+body{
+    background-image:url('/Resources/wp9060319-4k-desktop-smoke-wallpapers.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.About:active{
-    color: #68696b;
-}
+/* Footer */
+footer{
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    margin-top: 180px;
+  }
