@@ -18,6 +18,35 @@ h1{
 .headings{
     margin-left:100px;
 }
+/*Nav Bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+li a {
+    display: inline;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    margin: 0px 10px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #68696b;
+  }
+  .active {
+    background-color: #fff;
+    color: #000;
+  }
 /*Body*/
 body{
     background-image:url('/Resources/wp9060319-4k-desktop-smoke-wallpapers.png');

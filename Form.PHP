@@ -13,6 +13,7 @@ $FirstnameErr = $MiddlenameErr = $LastnameErr = $UsernameErr = $emailErr = $gend
 /*Variables*/ 
 $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = $date = $Countries = $password = $confirm_password = $fav_demon = $fav_game = $fav_ghost = $fav_horrormovie = $fav_character = $fav_musicartist = $Aboutme = $Hobbies = $discord = $facebook = $github = $instagram = $linkedin = $twitter = ""; 
 
+
 //PHP Submit Validation
 
 //PHP Form Validation
