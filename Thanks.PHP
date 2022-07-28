@@ -30,28 +30,28 @@ session_start();
     <div>
       <fieldset>
         <legend>Personal Information</legend>
-        <div class="labels"><label>First name : </label> <?php echo $_SESSION["Firstname"] ?>.</div>
-        <div class="labels"><label>Middle name : </label> <?php echo $_SESSION["Middlename"] ?>.</div>
-        <div class="labels"><label>Last Name : </label> <?php echo $_SESSION["Lastname"] ?>.</div>
-        <div class="labels"><label>Username : </label> <?php echo $_SESSION["Username"] ?>.</div>
-        <div class="labels"><label>Email : </label> <?php echo $_SESSION["email"] ?>.</div>
-        <div class="labels"><label>Gender : </label> <?php echo $_SESSION["gender"] ?>.</div>
-        <div class="labels"><label>Date Of Birth : </label> <?php echo $_SESSION["date"] ?>.</div>
-        <div class="labels"><label>Place Of Birth : </label> <?php echo $_SESSION["Countries"] ?>.</div>
+        <div class="labels"><label>First name : </label> <?php echo $_SESSION["Firstname"] ?></div>
+        <div class="labels"><label>Middle name : </label> <?php echo $_SESSION["Middlename"] ?></div>
+        <div class="labels"><label>Last Name : </label> <?php echo $_SESSION["Lastname"] ?></div>
+        <div class="labels"><label>Username : </label> <?php echo $_SESSION["Username"] ?></div>
+        <div class="labels"><label>Email : </label> <?php echo $_SESSION["email"] ?></div>
+        <div class="labels"><label>Gender : </label> <?php echo $_SESSION["gender"]?></div>
+        <div class="labels"><label>Date Of Birth : </label> <?php echo $_SESSION["date"] ?></div>
+        <div class="labels"><label>Place Of Birth : </label> <?php echo $_SESSION["Countries"] ?></div>
       </fieldset>
     </div>
 
     <div>
       <fieldset>
       <legend>About Yourself</legend>
-      <div class="labels"><label>Favourite Demon : </label> <?php echo $_SESSION["fav_demon"] ?>.</div>
-      <div class="labels"><label>Favourite Game : </label> <?php echo $_SESSION["fav_game"] ?>.</div>
-      <div class="labels"><label>Favourite Ghost : </label> <?php echo $_SESSION["fav_ghost"] ?>.</div>
-      <div class="labels"><label>Favourite Horror Movie : </label> <?php echo $_SESSION["fav_horrormovie"] ?>.</div>
-      <div class="labels"><label>Favourite Horror Movie Character : </label> <?php echo $_SESSION["fav_character"] ?>.</div>
-      <div class="labels"><label>Favourite Music Artist : </label> <?php echo $_SESSION["fav_musicartist"] ?>.</div>
-      <div class="labels"><label>About Yourself : </label> <?php echo $_SESSION["Aboutme"] ?>.</div>
-      <div class="labels"><label>Hobbies</label> <?php echo $_SESSION["Hobbies"] ?>.</div>
+      <div class="labels"><label>Favourite Demon : </label> <?php echo $_SESSION["fav_demon"] ?></div>
+      <div class="labels"><label>Favourite Game : </label> <?php echo $_SESSION["fav_game"] ?></div>
+      <div class="labels"><label>Favourite Ghost : </label> <?php echo $_SESSION["fav_ghost"] ?></div>
+      <div class="labels"><label>Favourite Horror Movie : </label> <?php echo $_SESSION["fav_horrormovie"] ?></div>
+      <div class="labels"><label>Favourite Horror Movie Character : </label> <?php echo $_SESSION["fav_character"] ?></div>
+      <div class="labels"><label>Favourite Music Artist : </label> <?php echo $_SESSION["fav_musicartist"] ?></div>
+      <div class="labels"><label>About Yourself : </label> <?php echo $_SESSION["Aboutme"] ?></div>
+      <div class="labels"><label>Hobbies</label> <?php echo $_SESSION["Hobbies"] ?></div>
       </fieldset>
     </div>
 
@@ -59,12 +59,12 @@ session_start();
     <div>
       <fieldset>
         <legend>Social Media</legend>
-        <div class="labels"><label>Discord : </label> <?php  echo $_SESSION["discord"] ?>.</div>
-        <div class="labels"><label>Facebook : </label> <?php echo $_SESSION["facebook"] ?>.</div>
-        <div class="labels"><label>GitHub : </label> <?php echo $_SESSION["github"] ?>.</div>
-        <div class="labels"><label>Instagram : </label> <?php echo $_SESSION["instagram"] ?>.</div>
-        <div class="labels"><label>Linkedin : </label> <?php echo $_SESSION["linkedin"] ?>.</div>
-        <div class="labels"><label>Twitter</label> <?php echo $_SESSION["twitter"] ?>.</div>
+        <div class="labels"><label>Discord : </label> <?php  echo $_SESSION["discord"] ?></div>
+        <div class="labels"><label>Facebook : </label> <?php echo $_SESSION["facebook"] ?></div>
+        <div class="labels"><label>GitHub : </label> <?php echo $_SESSION["github"] ?></div>
+        <div class="labels"><label>Instagram : </label> <?php echo $_SESSION["instagram"] ?></div>
+        <div class="labels"><label>Linkedin : </label> <?php echo $_SESSION["linkedin"] ?></div>
+        <div class="labels"><label>Twitter</label> <?php echo $_SESSION["twitter"] ?></div>
       </fieldset>
     </div>
 

@@ -130,10 +130,14 @@ body{
   }
 
   /* Footer */
+  /* Footer */
   footer{
-    padding: 5px;
+    padding: 10px 10px 0px 10px;
     background-color: #000;
     color: #fff;
-    margin-top: 180px;
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    height: 5%;
   }
   

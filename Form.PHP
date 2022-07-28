@@ -1,14 +1,6 @@
 <?php
 session_start();
-?>
-<html lang="en">
-<head>
-    <link href="./Form.CSS" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Arima&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <title>The Ghostly Coder Survey</title>
-</head>
-<body>
-<?php
+
 /*Error Variables*/ 
 $FirstnameErr = $MiddlenameErr = $LastnameErr = $UsernameErr = $emailErr = $genderErr = $otherErr = $dateErr = $CountriesErr = $passwordErr = $confirm_passwordErr = $fav_demonErr = $fav_gameErr = $fav_ghostErr = $fav_horrormovieErr = $fav_characterErr = $fav_musicartistErr = $AboutmeErr = $HobbiesErr= $discordErr = $facebookErr = $githubErr = $instagramErr = $linkedinErr = $twitterErr = "";
 
@@ -86,33 +78,7 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
     }else{
       $_SESSION["Countries"] = $Countries = test_input($_POST["Countries"]);
     }
-    /*if (empty($_POST["Password"])) {
-      $passwordErr = "Password is required";
-    }else{
-      $_SESSION["password"] = $password = test_input($_POST["password"]);
-    // This checks the password 
-    if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $password)) {
-        $passwordErr = 'the password does not meet the requirements!';
-      }
-      if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
-        'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
-     }else{
-       echo 'Strong password.';
-     }
-    }
-    if (empty($_POST["confirm_password"])) {
-      $confirm_passwordErr= "Password is required";
-    }else{
-      $confirm_password = test_input($_POST["confirm_password"]);
-    if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $password)) {
-        echo 'the password does not meet the requirements!';
-      }
-      if ($_POST["password"] === $_POST["confirm_password"]){
-        echo "Password correct";
-      }else{ 
-        echo "Password Incorrect";
-    }
-  }*/
+    
     if (empty($_POST["fav_demon"])) {
       $fav_demonErr = "";
     }else{
@@ -187,31 +153,6 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
     header("Location: Thanks.php");
     exit;
     }
-
-
-    /*header('Location: Thanks.PHP');
-    exit;*/
-    // Validate password strength
-    $uppercase = preg_match('@[A-Z]@', $password);
-    $lowercase = preg_match('@[a-z]@', $password);
-    $number    = preg_match('@[0-9]@', $password);
-    $specialChars = preg_match('@[^\w]@', $password);
-
-   /*if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
-      $ 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
-    }else{
-      echo 'Strong password.';
-    }
-    */
-
-    /*if ($_POST["password"] === $_POST["confirm_password"]){
-      echo "Password correct";
-    }else{ 
-      echo "Password Incorrect";
-    }*/
-
-    
-
   }
   function test_input($data) {
     $data = trim($data);
@@ -220,6 +161,13 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
     return $data;
   } 
   ?>
+  <html lang="en">
+<head>
+    <link href="./Form.CSS" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>The Ghostly Coder Survey</title>
+</head>
+<body>
 
   <!--Header-->
     <header>
@@ -487,19 +435,7 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
             <option value="Zambia">Zambia</option>
             <option value="Zimbabwe">Zimbabwe</option>
             </select><span class="error">*<?php echo $CountriesErr?></span>
-          </div>
-
-          <div title="Should contain at least one Uppercase, one Number, one Special Character and be at least 8 characters long" class="labels">
-            <label>Password :</label>
-            <input  type="password" name="password" id="password" maxlength="50">
-            <span class="error">*<?php echo $passwordErr;?></span>
-          </div>
-
-          <div class="labels" class="hovertext" data-hover="">
-            <label>Confirm Password :</label>
-            <input type="password" name="confirm_password" id="confirm_password" maxlength="50">
-            <span class="error">*<?php echo $confirm_passwordErr;?></span> 
-          </div>
+            </div>
       </fieldset> 
     </div>
    <!--About Yourself-->
