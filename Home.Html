@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
+
     <head>
         <link href="./Home.CSS" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Arima&family=Permanent+Marker&display=swap" rel="stylesheet">
         <title>The Ghostly Coder Survey</title>
     </head>
-
 
     <!--Header-->
     <header>
@@ -15,6 +15,7 @@
             <h1 class="header">The Ghostly Coder</h1>
         </div>
     </header>
+
     <ul>
         <li><a class="active" class="Home" href="#">Home</a></li>
         <li><a class="Form" href="/Form.PHP">Form</a>
@@ -23,11 +24,76 @@
     </ul>
             
 
-    <div><h1>Welcome to the Ghostly Coder Survey</h1></div>
+    <div class="welcome"><h1 class="welcome1">Welcome to the Ghostly Coder Survey!!</h1>
 
-    <div><h2>I will mostly likely keep your information and use it as my own so becareful what you put</h2></div>
+    <h2 class="welcome2">I will mostly likely keep your information and use it as my own so becareful what you put</h2>
 
-    <div><h2>So if you would like to proceed. Please click the form tab on the top of the page</h2></div>
+    <h2 class="welcome3">So if you would like to proceed. Please click the form tab on the top of the page</h2></div>
+
+    <input class="button" type="button" onclick="jumpscare();" value="Next"/>
+    <img class="jumpscare" src="/Resources/download (1).jpg"/>
+    <audio class="scream" src="/Resources/nmh_scream1.mp3"></audio>
+
+    <script>
+        function jumpscare(){
+            var jumpscare = document.getElementsByClassName("jumpscare");
+            jumpscare.style.visibility="visible";
+            var audio = document.getElementsByClassName(scream);
+            audio.play();
+        }
+    </script>
+
+    <!--Follow Mouse-->
+    <div id="ghost"> 
+        <img src="/Resources/PngItem_6377826.png" width="50px" height="50px"/>
+    </div>
+    <script>
+        var ghost = document.getElementById("ghost");
+        document.addEventListener("mousemove", getMouse); 
+
+
+        ghost.style.position = "absolute"; //css		
+        var ghostpos = {x:0, y:0};
+
+        setInterval(followMouse, 50);
+        
+        var mouse = {x:0, y:0}; //mouse.x, mouse.y
+        
+        var dir = "right";
+        function getMouse(e){
+            mouse.x = e.pageX;
+            mouse.y = e.pageY;
+        //Checking directional change
+        if(mouse.x > beepos.x){
+        dir = "right";
+        } else {
+        dir = "left";
+        }
+        }
+        
+        function followMouse(){
+            //1. find distance X , distance Y
+            var distX = mouse.x - ghostpos.x;
+            var distY = mouse.y - ghostpos.y;
+            //Easing motion
+    //Progressive reduction of distance 
+            ghostpos.x += distX/5;
+            ghostpos.y += distY/2;
+            
+            ghost.style.left = ghostpos.x + "px";
+            ghost.style.top = ghostpos.y + "px";
+    
+    
+        //Apply css class 
+        if (dir == "right"){
+        ghost.setAttribute("class", "right");
+        } else {
+        ghost.setAttribute("class", "left");        
+        }
+            
+        }
+    </script>
+
     <footer>
         <div class="name">
           <p>The Ghostly Coder / SurveyForm</p>

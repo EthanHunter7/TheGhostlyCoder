@@ -18,10 +18,10 @@ header{
 .header{
     display: inline-block;
     font-size: 50px;
-    margin-right: 100px;
+    margin-right: 20px;
     color: #fff;
 }
-h1{
+.myself{
     display: inline-block;
     font-size: 50px;
     margin-right: 100px;
