@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
     <link href="./Form.CSS" rel="stylesheet">
@@ -18,20 +20,21 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
 
 //PHP Form Validation
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $_SESSION = $_POST;
     
     if (empty($_POST["Firstname"])) {
       $FirstnameErr = "First Name is required";
     }else{
-      $Firstname = test_input($_POST["Firstname"]);
+      $_SESSION["Firstname"] = $Firstname = test_input($_POST["Firstname"]);
     //Checks if First Name only contains letter and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$Firstname)) {
         $FirstnameErr = "Only letters and white space allowed";
       }    
     }
     if (empty($_POST["Middlename"])) {
-      $$MiddlenameErr = "";
+       $MiddlenameErr = "";
     }else{
-      $Middlename = test_input($_POST["Middlename"]);
+      $_SESSION["Middlename"] = $Middlename = test_input($_POST["Middlename"]);
     //Checks if Middle Name only contains letter and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$Middlename)) {
         $MiddlenameErr = "Only letters and white space allowed";
@@ -40,7 +43,7 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
     if (empty($_POST["Lastname"])) {
       $LastnameErr = "Last Name is required";
     }else{
-      $Lastname = test_input($_POST["Lastname"]);
+      $_SESSION["Lastname"] = $Lastname = test_input($_POST["Lastname"]);
     //Checks if Last Name only contains letter and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/", $Lastname)) {
         $LastnameErr = "Only letters and white space allowed";
@@ -49,16 +52,15 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
     if (empty($_POST["Username"])) {
       $UsernameErr = "Username is required";
     }else{
-      $Username = test_input($_POST["Username"]);
+      $_SESSION["Username"] = $Username = test_input($_POST["Username"]);
     //Checks if the Username is in the correct format
-    if(!preg_match("/^[a-zA-Z0-9]+$/",$username)) {
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$Username))
         $UsernameErr="Username Invalid";
       }
-    }
     if (empty($_POST["email"])) {
       $emailErr = "Email is required";
     }else{
-      $email = test_input($_POST["email"]);
+      $_SESSION["email"] = $email = test_input($_POST["email"]);
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailErr = "Invalid email format";
@@ -67,31 +69,27 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
     if (empty($_POST["gender"])) {
       $genderErr = "Gender is required";
     }else{
-      $gender = test_input($_POST["gender"]);
+      $_SESSION["gender"] = $gender = test_input($_POST["gender"]);
     }
     if (empty($_POST["other"])) {
       $otherErr = "";
     }else{
-      $other = test_input($_POST["other"]);
+      $_SESSION["other"] = $other = test_input($_POST["other"]);
     }
     if (empty($_POST["date"])) {
       $dateErr = "Date is required";
     }else{
-      $date = test_input($_POST["date"]);
-    //This checks if the date is formated correctly
-    if(!preg_match("/^(?:\\d{4})-(?:\\d{2})-(?:\\d{2})T(?:\\d{2}):(?:\\d{2}):(?:\\d{2}(?:\\.\\d*)?)(?:(?:-(?:\\d{2}):(?:\\d{2})|Z)?)$/", $date)){
-      $dateErr="Date is inputted incorrectly";
-      }
+      $_SESSION["date"] = $date = test_input($_POST["date"]);
     }
     if (empty($_POST["Countries"])) {
       $CountriesErr = "Place of Birth is required";
     }else{
-      $Countries = test_input($_POST["Countries"]);
+      $_SESSION["Countries"] = $Countries = test_input($_POST["Countries"]);
     }
-    if (empty($_POST["Password"])) {
+    /*if (empty($_POST["Password"])) {
       $passwordErr = "Password is required";
     }else{
-      $password = test_input($_POST["password"]);
+      $_SESSION["password"] = $password = test_input($_POST["password"]);
     // This checks the password 
     if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,12}$/', $password)) {
         $passwordErr = 'the password does not meet the requirements!';
@@ -114,77 +112,85 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
       }else{ 
         echo "Password Incorrect";
     }
-  }
+  }*/
     if (empty($_POST["fav_demon"])) {
       $fav_demonErr = "";
     }else{
-      $fav_demon = test_input($_POST["fav_demon"]);
+      $_SESSION["fav_demon"] = $fav_demon = test_input($_POST["fav_demon"]);
     }
     if (empty($_POST["fav_game"])) {
       $fav_gameErr = "";
     }else{
-      $fav_game = test_input($_POST["fav_game"]);
+      $_SESSION["fav_game"] = $fav_game = test_input($_POST["fav_game"]);
     }
     if (empty($_POST["fav_ghost"])) {
       $fav_ghostErr = "";
     }else{
-      $fav_ghost = test_input($_POST["fav_ghost"]);
+      $_SESSION["fav_ghost"] = $fav_ghost = test_input($_POST["fav_ghost"]);
     }
     if (empty($_POST["fav_horrormovie"])) {
       $fav_horrormovieErr = "";
     }else{
-      $fav_horrormovie = test_input($_POST["fav_horrormovie"]);
+      $_SESSION["fav_horrormovie"] = $fav_horrormovie = test_input($_POST["fav_horrormovie"]);
     }
     if (empty($_POST["fav_character"])) {
       $fav_characterErr = "";
     }else{
-      $fav_character = test_input($_POST["fav_character"]);
+      $_SESSION["fav_character"] = $fav_character = test_input($_POST["fav_character"]);
     }
     if (empty($_POST["fav_musicartist"])) {
       $fav_musicartistErr = "";
     }else{
-      $fav_musicartist = test_input($_POST["fav_musicartist"]);
+      $_SESSION["fav_musicartist"] = $fav_musicartist = test_input($_POST["fav_musicartist"]);
     }
     if (empty($_POST["Aboutme"])) {
       $AboutmeErr = "";
     }else{
-      $Aboutme = test_input($_POST["Aboutme"]);
+      $_SESSION["Aboutme"] = $Aboutme = test_input($_POST["Aboutme"]);
     }
     if (empty($_POST["Hobbies"])) {
       $HobbiesErr = "";
     }else{
-      $Hobbies = test_input($_POST["Hobbies"]);
+      $_SESSION["Hobbies"] = $Hobbies = test_input($_POST["Hobbies"]);
     }
     if (empty($_POST["discord"])) {
       $discordErr = "";
     }else{
-      $discord = test_input($_POST["discord"]);
+      $_SESSION["discord"] = $discord = test_input($_POST["discord"]);
     }
     if (empty($_POST["facebook"])) {
       $facebookErr = "";
     }else{
-      $facebook = test_input($_POST["facebook"]);
+      $_SESSION["facebook"] = $facebook = test_input($_POST["facebook"]);
     }
     if (empty($_POST["github"])) {
       $githubErr = "";
     }else{
-      $github = test_input($_POST["github"]);
+      $_SESSION["github"] = $github = test_input($_POST["github"]);
     }
     if (empty($_POST["instagram"])) {
       $instagramErr = "";
     }else{
-      $instagram = test_input($_POST["instagram"]);
+      $_SESSION["instagram"] = $instagram = test_input($_POST["instagram"]);
     }
     if (empty($_POST["linkedin"])) {
       $linkedinErr = "";
     }else{
-      $linkedin= test_input($_POST["linkedin"]);
+      $_SESSION["linkedin"] = $linkedin= test_input($_POST["linkedin"]);
     } 
     if (empty($_POST["twitter"])) {
       $twitterErr = "";
     }else{
-      $twitter = test_input($_POST["instagram"]);
+      $_SESSION["twitter"] = $twitter = test_input($_POST["instagram"]);
     } 
+    if($FirstnameErr == "" && $MiddlenameErr == "" && $LastnameErr == "" && $UsernameErr == "" && $emailErr == "" && $genderErr == "" && $dateErr == "" && $CountriesErr == "" && $fav_demonErr == "" && $fav_gameErr == "" && $fav_ghostErr == "" && $fav_horrormovieErr == "" && $fav_characterErr == "" && $fav_musicartistErr == "" && $discordErr == "" && $facebookErr == "" && $githubErr == "" && $instagramErr == "" && $linkedinErr =="" && $twitterErr == "" ){
+    header("Location: Thanks.php");
+    exit;
+    }
+
+
+    /*header('Location: Thanks.PHP');
+    exit;*/
     // Validate password strength
     $uppercase = preg_match('@[A-Z]@', $password);
     $lowercase = preg_match('@[a-z]@', $password);
@@ -204,14 +210,15 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
       echo "Password Incorrect";
     }*/
 
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    } 
+    
 
   }
+  function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  } 
   ?>
 
   <!--Header-->
@@ -230,7 +237,7 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
 
     <p class="required"><span class="error"><label class="key">Key :  </label>* required field</span></p>
   <!--Personal Information-->
-  <form action="/Thanks.PHP" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+  <form  method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
     <div class="row">
       <div class="column">
         <fieldset class= "personal">
@@ -609,3 +616,7 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
   </footer>
 </body>
 </html>
+<?php
+/*session_unset();
+session_destroy();*/
+?>
