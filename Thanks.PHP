@@ -16,7 +16,7 @@ session_start();
       </div>
     </header>
       <ul>
-          <li><a class="active" class="Home" href="#">Home</a></li>
+          <li><a class="Home" href="#">Home</a></li>
           <li><a class="Form" href="/Form.PHP">Form</a>
           <li><a class="About" href="/About.HTML">About Me</a></li>
 

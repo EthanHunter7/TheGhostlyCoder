@@ -129,15 +129,15 @@ body{
     }
   }
 
-  /* Footer */
+ 
   /* Footer */
   footer{
     padding: 10px 10px 0px 10px;
     background-color: #000;
     color: #fff;
-    position: absolute;
     bottom: 0;
     width: 99%;
     height: 5%;
+    margin-top: 10px;
   }
   
