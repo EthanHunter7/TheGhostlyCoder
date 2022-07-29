@@ -35,7 +35,7 @@ session_start();
         <div class="labels"><label>Last Name : </label> <?php echo $_SESSION["Lastname"] ?></div>
         <div class="labels"><label>Username : </label> <?php echo $_SESSION["Username"] ?></div>
         <div class="labels"><label>Email : </label> <?php echo $_SESSION["email"] ?></div>
-        <div class="labels"><label>Gender : </label> <?php echo $_SESSION["gender"]?></div>
+        <div class="labels"><label>Gender : </label> <?php echo $_SESSION["gender" ], " " . $_SESSION["other"]?></div>
         <div class="labels"><label>Date Of Birth : </label> <?php echo $_SESSION["date"] ?></div>
         <div class="labels"><label>Place Of Birth : </label> <?php echo $_SESSION["Countries"] ?></div>
       </fieldset>
