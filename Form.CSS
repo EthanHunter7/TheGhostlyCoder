@@ -145,14 +145,6 @@ textarea{
     border: solid 1px #000
 }
 
-input:active,
-input:focus,
-textarea:active,
-textarea:focus{
-    border: 1px solid #68696b;
-}
-
-
 /*Display */
 .row{
     display:flex;
