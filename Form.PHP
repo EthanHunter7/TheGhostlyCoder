@@ -192,7 +192,7 @@ $Firstname = $Middlename = $Lastname = $Username =  $email = $gender = $other = 
             <legend>Personal Information</legend>
 
             <div class="labels" title="Only allows to contain letters and whitespace">
-              <label class="marker">First Name :</label>
+              <label>First Name :</label>
               <input type="text" name="Firstname" value="<?php echo $Firstname;?>">
               <span class="error">* <?php echo $FirstnameErr;?></span>
             </div>
