@@ -6,7 +6,7 @@ This Project was made with HTML/PHP/CSS and a little bit of JS.
 The Baltic Apprenticeships Software Academy was a 2 week bootcamp where for the week we were taught the fundementals of HTML and PHP. Then for week 2 we were asked to make a web form with the skills we had learnt and through research. I also said CSS was used but they did not teach us any of the CSS that was all done under my own research and I also add a little bit of JS on my own as well . 
 
 ## A Look Into My Project 
----
+
 This is a look into the project I was able to produce in the week I was given to make the project.
 
 ### Home Page 
